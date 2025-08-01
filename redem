@@ -1,0 +1,25 @@
+🎤 Analog IC Design
+This repository documents various aspects of analog integrated circuit (IC) design with examples, circuit images, simulations, and system-level analysis. It is structured for quick understanding and reference for students and enthusiasts in electronics and communication.
+
+📑 Table of Contents
+USB Microphone System Analysis
+High-Pass Filter Circuit
+1. USB Microphone System Analysis
+This section explains the analog front-end of a USB microphone setup and its role in signal conditioning and conversion.
+Circuit Overview:
+
+Input Capacitor ( C_i = 4.7 \mu F ): Blocks DC and allows AC signals to pass.
+Resistors ( R_i = R_f = 5k\Omega ): Define gain and time constant of the filter.
+Op-Amp: Configured in non-inverting mode to amplify the filtered signal.
+S-Domain Transfer Function:
+
+H(s) = (Rf * s * Ci) / (1 + s * Ri * Ci)
+
+At low frequencies (s → 0), H(s) → 0 → High attenuation of low-frequency signals.
+At high frequencies (s → ∞), H(s) → Rf / Ri = 1 → Passes high frequencies with gain 1.
+🔻 Cutoff Frequency (fc):
+fc = 1 / (2πRiCi)
+
+For Ri = 5kΩ, Ci = 4.7μF:
+
+fc ≈ 6.77 Hz
